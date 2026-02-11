@@ -1,0 +1,157 @@
+[
+  {
+    "id": 1,
+    "omikuji_number": "第一番",
+    "luck_level": "大吉",
+    "poem": {
+      "text": "桜花 のどかににおう 春の野に 蝶もきて舞う 人の楽しさ",
+      "meaning": "春の野原に桜の花がのどかに香り、蝶も舞い遊ぶように、心楽しく幸せな運気である。"
+    },
+    "general_advice": "運気は盛大。心のままに振る舞っても天の加護がある。しかし、調子に乗りすぎて油断すれば、その福も消え失せる。謙虚さを忘れぬこと。",
+    "categories": {
+      "wish": "思うがままに叶う。大願成就の日近し。",
+      "waiting_person": "来る。たよりあり。",
+      "lost_item": "出る。高いところにある。",
+      "travel": "よし。連れの人あればなお良し。",
+      "business": "利益あり。進んでなせ。",
+      "study": "安心して勉学せよ。成果あがる。",
+      "market_speculation": "買い時なり。利あり。",
+      "dispute": "勝つ。しかし相手を敬え。",
+      "romance": "相思相愛。良縁整う。",
+      "moving": "さわりなし。進め。",
+      "childbirth": "安産。母子ともに健やか。",
+      "illness": "治る。信心せよ。",
+      "marriage_proposal": "ととのう。急ぐが吉。"
+    },
+    "lucky_data": {
+      "color": "金色",
+      "number": 7,
+      "direction": "南",
+      "item": "鈴"
+    }
+  },
+  {
+    "id": 2,
+    "omikuji_number": "第二番",
+    "luck_level": "中吉",
+    "poem": {
+      "text": "照りつづく 日影見えねど 秋の月 雲の絶え間を 出でて輝く",
+      "meaning": "長く続いた苦労の陰も消え、雲の切れ間から秋の名月が輝き出るように、運気が開けてくる。"
+    },
+    "general_advice": "次第に運が開ける。焦りは禁物である。今は実力を蓄え、好機を待てば、必ずや大きな成果を得られるだろう。",
+    "categories": {
+      "wish": "直ちには叶わぬが、後には叶う。",
+      "waiting_person": "遅れるが来る。",
+      "lost_item": "出にくい。人に問えばわかる。",
+      "travel": "遠出は控えよ。近場なら吉。",
+      "business": "小利あり。深追いは禁物。",
+      "study": "努力の積み重ねが実る。",
+      "market_speculation": "今は動くな。静観せよ。",
+      "dispute": "長引く恐れあり。和解せよ。",
+      "romance": "誠意を尽くせば通じる。",
+      "moving": "時を待て。急ぐと損をする。",
+      "childbirth": "順調。産後の養生を大切に。",
+      "illness": "長引くが命に別状なし。",
+      "marriage_proposal": "迷いあり。時を置け。"
+    },
+    "lucky_data": {
+      "color": "朱色",
+      "number": 3,
+      "direction": "東",
+      "item": "扇子"
+    }
+  },
+  {
+    "id": 3,
+    "omikuji_number": "第三番",
+    "luck_level": "吉",
+    "poem": {
+      "text": "波の音 嵐の音は 静まりて 日影のどけき 大海原かな",
+      "meaning": "荒れ狂っていた波や嵐の音も静まり、太陽がのどかに照らす大海原のような、穏やかな運気である。"
+    },
+    "general_advice": "平穏無事な運勢。大きな変化を望むより、現状維持を心がけることで幸福が得られる。周囲との調和を大切にせよ。",
+    "categories": {
+      "wish": "叶う。しかし大きな望みは控えよ。",
+      "waiting_person": "来る。驚くような土産あり。",
+      "lost_item": "家の中にある。探せ。",
+      "travel": "問題なし。楽しき旅となる。",
+      "business": "売り買い共に吉。",
+      "study": "基礎を固めれば吉。",
+      "market_speculation": "安定している。",
+      "dispute": "理はこちらにある。心配無用。",
+      "romance": "穏やかな愛が育つ。",
+      "moving": "よき処が見つかる。",
+      "childbirth": "安産。女の子の可能性大。",
+      "illness": "軽し。医師にかかればすぐ治る。",
+      "marriage_proposal": "良き相手現る。"
+    },
+    "lucky_data": {
+      "color": "青",
+      "number": 5,
+      "direction": "北西",
+      "item": "手ぬぐい"
+    }
+  },
+  {
+    "id": 4,
+    "omikuji_number": "第四番",
+    "luck_level": "末吉",
+    "poem": {
+      "text": "古き里 荒れたる家の 垣根にも 花咲き匂う 春は来にけり",
+      "meaning": "古びて荒れた家の垣根にも花が咲き、春が訪れた。長く辛い冬の時代が終わり、ようやく希望が見えてくる。"
+    },
+    "general_advice": "初めは苦労が多いが、後になって良くなる。何事も辛抱強く取り組むことが大切。諦めなければ、必ず春は来る。",
+    "categories": {
+      "wish": "今は叶わず。後日に期待せよ。",
+      "waiting_person": "来ない。便りもない。",
+      "lost_item": "出ず。あきらめよ。",
+      "travel": "行かぬがよい。災いあり。",
+      "business": "利益少なし。時期を待て。",
+      "study": "困難あり。一層の努力が必要。",
+      "market_speculation": "損をする。手を出くな。",
+      "dispute": "負ける。引くが勝ち。",
+      "romance": "障害あり。今は耐えよ。",
+      "moving": "動かぬが吉。",
+      "childbirth": "少し障りあり。用心せよ。",
+      "illness": "重し。養生せよ。",
+      "marriage_proposal": "調わず。見合わせよ。"
+    },
+    "lucky_data": {
+      "color": "緑",
+      "number": 8,
+      "direction": "北東",
+      "item": "古書"
+    }
+  },
+  {
+    "id": 5,
+    "omikuji_number": "第五番",
+    "luck_level": "凶",
+    "poem": {
+      "text": "黒雲の 空にかかりて 月見えず 闇に迷いて 道を失う",
+      "meaning": "黒い雲が空を覆い隠し、月も見えず、暗闇の中で道に迷ってしまうような、困難な状況である。"
+    },
+    "general_advice": "今は何をしてもうまくいかない時期。無理に進めば災いを招く。静かに身を慎み、嵐が過ぎ去るのを待つこと。自重せよ。",
+    "categories": {
+      "wish": "叶わず。邪念を捨てよ。",
+      "waiting_person": "来ず。期待するな。",
+      "lost_item": "戻らず。盗難に注意。",
+      "travel": "凶。病難盗難の恐れあり。",
+      "business": "損害あり。現状維持に努めよ。",
+      "study": "身に入らず。雑念を払え。",
+      "market_speculation": "大暴落の兆し。",
+      "dispute": "必ず負ける。関わるな。",
+      "romance": "別れの兆しあり。",
+      "moving": "大凶。動けば災いあり。",
+      "childbirth": "難産のおそれ。神に祈れ。",
+      "illness": "長引く。名医を探せ。",
+      "marriage_proposal": "破談となる。"
+    },
+    "lucky_data": {
+      "color": "白",
+      "number": 1,
+      "direction": "北",
+      "item": "塩"
+    }
+  }
+]
