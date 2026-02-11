@@ -111,33 +111,17 @@ resource "aws_vpc_endpoint_route_table_association" "private" {
 
 //ELB
 resource "aws_lb" "public_alb" {
-  name               = "external-alb"
+  name               = "public-alb"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.public_alb_sg.id]
   subnets            = [for k, v in local.public_subnets : v.id]
 }
 
-resource "aws_lb_listener" "front_end" {
+resource "aws_lb_listener" "http" {
   load_balancer_arn = aws_lb.public_alb.arn
   port              = "80"
   protocol          = "HTTP"
-
-  default_action {
-    type = "redirect"
-
-    redirect {
-      port        = "443"
-      protocol    = "HTTPS"
-      status_code = "HTTP_301"
-    }
-  }
-}
-
-resource "aws_lb_listener" "https" {
-  load_balancer_arn = aws_lb.my_alb.arn
-  port              = "443"
-  protocol          = "HTTPS"
 
   default_action {
     type             = "forward"
@@ -157,7 +141,7 @@ resource "aws_lb_listener" "private_http" {
 }
 
 resource "aws_lb" "private_alb" {
-  name               = "internal-alb"
+  name               = "private-alb"
   internal           = true
   load_balancer_type = "application"
   security_groups    = [aws_security_group.private_alb_sg.id]
@@ -172,7 +156,7 @@ resource "aws_lb_target_group" "public_instance_tg" {
   vpc_id   = aws_vpc.main.id
 
   health_check {
-    path = "/"
+    path = "/api/health"
     port = "3000"
   }
 }
@@ -360,24 +344,24 @@ resource "aws_vpc_security_group_egress_rule" "allow_ssm_https" {
 resource "aws_launch_template" "bastion_host_lt" {
   name     = "bastion-host-lt"
   image_id = "resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
-  iam_instance_profile {
-    name = "AmazonSSMRoleForInstancesQuickSetup"
-  }
-  instance_type          = "t2.nano"
+  # iam_instance_profile {
+  #   name = "AmazonSSMRoleForInstancesQuickSetup"
+  # }
+  instance_type          = "t3.micro"
   vpc_security_group_ids = [aws_security_group.minhnt146_bastion_host.id]
-  key_name               = "minhnt146-keypair"
+  key_name               = "demo"
   update_default_version = true
 }
 
 resource "aws_launch_template" "public_instance_lt" {
   name     = "public-instance-lt"
   image_id = "resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
-  iam_instance_profile {
-    name = "AmazonSSMRoleForInstancesQuickSetup"
-  }
-  instance_type          = "t2.micro"
+  # iam_instance_profile {
+  #   name = "AmazonSSMRoleForInstancesQuickSetup"
+  # }
+  instance_type          = "t3.micro"
   vpc_security_group_ids = [aws_security_group.minhnt146_public_sg.id]
-  key_name               = "minhnt146-keypair"
+  key_name               = "demo"
   update_default_version = true
   user_data = base64encode(templatefile("${path.module}/scripts/frontend.sh", {
     api_url = "http://${aws_lb.private_alb.dns_name}"
@@ -387,12 +371,12 @@ resource "aws_launch_template" "public_instance_lt" {
 resource "aws_launch_template" "private_instance_lt" {
   name     = "private-instance-lt"
   image_id = "resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
-  iam_instance_profile {
-    name = "AmazonSSMRoleForInstancesQuickSetup"
-  }
-  instance_type          = "t2.micro"
+  # iam_instance_profile {
+  #   name = "AmazonSSMRoleForInstancesQuickSetup"
+  # }
+  instance_type          = "t3.micro"
   vpc_security_group_ids = [aws_security_group.minhnt146_private_sg.id]
-  key_name               = "minhnt146-keypair"
+  key_name               = "demo"
   update_default_version = true
   user_data              = filebase64("${path.module}/scripts/api.sh")
 }
