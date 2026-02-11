@@ -25,9 +25,7 @@ export default function Home() {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL || ""}/api/v1/omikuji/draw`,
-      );
+      const res = await fetch(`/api/proxy/api/v1/omikuji/draw`);
 
       if (!res.ok) throw new Error("API call failed");
 

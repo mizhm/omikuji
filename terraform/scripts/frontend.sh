@@ -11,12 +11,20 @@ yum update -y
 yum install -y unzip jq
 
 # Install Bun
-export BUN_INSTALL="/home/ec2-user/.bun"
+export HOME="/root"
+export BUN_INSTALL="$HOME/.bun"
 curl -fsSL https://bun.sh/install | bash
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# Move bun to ec2-user home
+rm -rf /home/ec2-user/.bun
+mv /root/.bun /home/ec2-user/.bun
+
 # Ensure ec2-user owns bun directory
 chown -R ec2-user:ec2-user /home/ec2-user/.bun
+
+# Update BUN_INSTALL for systemd
+BUN_INSTALL="/home/ec2-user/.bun"
 
 # Create app directory
 APP_DIR="/var/www/omikuji-ui"
@@ -51,10 +59,6 @@ su - ec2-user -c "curl -L -o $APP_DIR/frontend-artifact.tar.gz '$LATEST_RELEASE_
 # Setup application
 cd "$APP_DIR"
 su - ec2-user -c "cd $APP_DIR && tar -xzvf frontend-artifact.tar.gz"
-
-# Install dependencies strictly (using bun)
-# We need to make sure we use the bun we just installed
-su - ec2-user -c "export PATH=$BUN_INSTALL/bin:\$PATH && cd $APP_DIR && bun install --production"
 
 # Create systemd service
 cat <<EOF > /etc/systemd/system/omikuji-ui.service
