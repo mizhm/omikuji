@@ -47,10 +47,43 @@ func (h *OmikujiHandler) Draw(w http.ResponseWriter, r *http.Request) {
 	randomIndex := rand.Intn(len(h.Fortunes))
 	selectedFortune := h.Fortunes[randomIndex]
 
+	serverInfo := GetServerInfo()
+
+	response := struct {
+		models.Omikuji
+		ServerInfo models.ServerInfo `json:"server_info"`
+	}{
+		Omikuji:    selectedFortune,
+		ServerInfo: serverInfo,
+	}
+
 	render.Status(r, http.StatusOK)
-	render.JSON(w, r, selectedFortune)
+	render.JSON(w, r, response)
 }
 
 func (h *OmikujiHandler) GetAll(w http.ResponseWriter, r *http.Request) {
 	render.JSON(w, r, h.Fortunes)
+}
+
+func GetServerInfo() models.ServerInfo {
+	hName, _ := os.Hostname()
+
+	instanceID := getAWSMetadata("instance-id")
+	
+	if instanceID == "not-aws-instance" {
+		return models.ServerInfo{
+			Hostname:  hName,
+			PrivateIP: "127.0.0.1 (Local Mode)",
+			InstanceID: "local-dev",
+			AvailabilityZone: "localhost",
+		}
+	}
+
+	return models.ServerInfo{
+		Hostname:         hName,
+		InstanceID:       instanceID,
+		AvailabilityZone: getAWSMetadata("placement/availability-zone"),
+		PrivateIP:        getAWSMetadata("local-ipv4"),
+		LocalHostname:    getAWSMetadata("local-hostname"),
+	}
 }
