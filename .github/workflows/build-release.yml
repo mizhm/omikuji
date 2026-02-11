@@ -1,0 +1,29 @@
+name: Build and Release Artifacts
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build API
+        run: |
+          cd api && go build -o server main.go
+          tar -czvf ../backend-artifact.tar.gz server data/omikuji.json
+
+      - name: Build UI
+        run: |
+          cd ui && npm install && npm run build
+          tar -czvf ../frontend-artifact.tar.gz .next public package.json node_modules
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            backend-artifact.tar.gz
+            frontend-artifact.tar.gz
