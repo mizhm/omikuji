@@ -18,7 +18,6 @@ const handler = async (
   }
 
   const targetUrl = `${baseUrl}/${path}`;
-  console.log(`[Proxy] Forwarding to: ${targetUrl}`);
 
   try {
     const isBodyRequest = ["POST", "PUT", "PATCH"].includes(request.method);
