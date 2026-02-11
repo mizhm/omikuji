@@ -5,20 +5,38 @@ on:
     tags:
       - "v*"
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.21"
+          cache-dependency-path: api/go.sum
+
       - name: Build API
         run: |
-          cd api && go build -o server main.go
+          cd api
+          go mod download
+          go build -o server main.go
           tar -czvf ../backend-artifact.tar.gz server data/omikuji.json
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
 
       - name: Build UI
         run: |
-          cd ui && npm install && npm run build
+          cd ui
+          bun install
+          bun run build
           tar -czvf ../frontend-artifact.tar.gz .next public package.json node_modules
 
       - name: Create Release
@@ -27,3 +45,5 @@ jobs:
           files: |
             backend-artifact.tar.gz
             frontend-artifact.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
