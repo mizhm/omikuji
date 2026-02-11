@@ -14,19 +14,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # --- BACKEND ---
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
           go-version: "1.25.5"
-          cache-dependency-path: api/go.sum5
+          cache: true
+          cache-dependency-path: api/go.sum
 
       - name: Build API
         run: |
           cd api
           go mod download
-          go build -o server main.go
+          # Thêm cờ tối ưu hóa dung lượng
+          CGO_ENABLED=0 go build -ldflags="-s -w" -o server main.go
           tar -czvf ../backend-artifact.tar.gz server data/omikuji.json
 
+      # --- FRONTEND ---
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
         with:
@@ -35,12 +39,21 @@ jobs:
       - name: Build UI
         run: |
           cd ui
-          bun install
-          bun run build
-          tar -czvf ../frontend-artifact.tar.gz .next public package.json node_modules
+          bun install --frozen-lockfile
+          # Build Next.js production
+          bun run build 
 
+          # Nếu bạn đã bật standalone trong next.config.js:
+          # Thư mục standalone đã bao gồm node_modules rút gọn và .next/server
+          cp -r public .next/standalone/
+          cp -r .next/static .next/standalone/.next/
+
+          cd .next/standalone
+          tar -czvf ../../../frontend-artifact.tar.gz .
+
+      # --- RELEASE ---
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2 # Cập nhật v2
         with:
           files: |
             backend-artifact.tar.gz
