@@ -54,4 +54,19 @@ variable "key_name" {
   default     = "demo"
 }
 
+variable "domain_name" {
+  description = "Domain name for the application (e.g. example.com)"
+  type        = string
+}
+
+variable "subdomain" {
+  description = "Subdomain for the application (e.g. www)"
+  type        = string
+}
+
+variable "route53_zone_id" {
+  description = "Route53 Hosted Zone ID for DNS validation"
+  type        = string
+}
+
 

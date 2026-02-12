@@ -87,10 +87,20 @@ resource "aws_vpc_security_group_egress_rule" "bastion_to_private" {
   to_port                      = 22
 }
 
-resource "aws_vpc_security_group_egress_rule" "bastion_internet" {
+resource "aws_vpc_security_group_egress_rule" "bastion_http" {
   security_group_id = aws_security_group.bastion.id
   cidr_ipv4         = "0.0.0.0/0"
-  ip_protocol       = "-1" # Allow all for updates/package installation
+  ip_protocol       = "tcp"
+  from_port         = 80
+  to_port           = 80
+}
+
+resource "aws_vpc_security_group_egress_rule" "bastion_https" {
+  security_group_id = aws_security_group.bastion.id
+  cidr_ipv4         = "0.0.0.0/0"
+  ip_protocol       = "tcp"
+  from_port         = 443
+  to_port           = 443
 }
 
 # --- Public Instance SG ---
@@ -164,12 +174,4 @@ resource "aws_vpc_security_group_egress_rule" "private_instance_internet_https" 
   from_port         = 443
   to_port           = 443
   description       = "Allow HTTPS outbound (e.g. S3 endpoint, SSM)"
-}
-
-resource "aws_vpc_security_group_egress_rule" "private_instance_icmp" {
-  security_group_id = aws_security_group.private_instance.id
-  cidr_ipv4         = "0.0.0.0/0"
-  ip_protocol       = "icmp"
-  from_port         = -1
-  to_port           = -1
 }

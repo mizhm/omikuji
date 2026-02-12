@@ -20,6 +20,9 @@ module "tokyo_app" {
   instance_type        = var.instance_type
   key_name             = "demo" # Hardcoded key name or verify existing key in both regions? Key pairs are regional!
   # Note: The key pair 'demo' must exist in BOTH ap-northeast-1 and ap-northeast-3.
+  domain_name       = var.domain_name
+  subdomain         = var.subdomain
+  route53_zone_id   = data.aws_route53_zone.main.zone_id
 }
 
 # --- Module: Osaka (Passive) ---
@@ -38,6 +41,9 @@ module "osaka_app" {
   allowed_ssh_cidr     = var.allowed_ssh_cidr
   instance_type        = var.instance_type
   key_name             = "demo" # Key pair 'demo' must exist in Osaka too.
+  domain_name       = var.domain_name
+  subdomain         = var.subdomain
+  route53_zone_id   = data.aws_route53_zone.main.zone_id
 }
 
 # --- Route 53 Health Check (for Active Region) ---
