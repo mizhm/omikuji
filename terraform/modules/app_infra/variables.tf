@@ -1,13 +1,11 @@
-variable "aws_region_tokyo" {
-  description = "Primary region (Active)"
+variable "aws_region" {
+  description = "AWS region to deploy resources"
   type        = string
-  default     = "ap-northeast-1"
 }
 
-variable "aws_region_osaka" {
-  description = "Secondary region (Passive)"
+variable "region_name" {
+  description = "Region name for tagging (e.g. tokyo, osaka)"
   type        = string
-  default     = "ap-northeast-3"
 }
 
 variable "project_name" {
@@ -17,27 +15,25 @@ variable "project_name" {
 }
 
 variable "environment" {
-  description = "Environment name (e.g., prod)"
+  description = "Environment name (e.g., dev, prod)"
   type        = string
-  default     = "prod"
+  default     = "dev"
 }
 
 variable "vpc_cidr" {
   description = "CIDR block for the VPC"
   type        = string
-  default     = "10.0.0.0/16"
+  default     = "10.1.0.0/20"
 }
 
 variable "public_subnet_cidrs" {
   description = "List of CIDR blocks for public subnets"
   type        = list(string)
-  default     = ["10.0.1.0/24", "10.0.2.0/24"]
 }
 
 variable "private_subnet_cidrs" {
   description = "List of CIDR blocks for private subnets"
   type        = list(string)
-  default     = ["10.0.10.0/24", "10.0.11.0/24"]
 }
 
 variable "allowed_ssh_cidr" {
@@ -58,25 +54,4 @@ variable "key_name" {
   default     = "demo"
 }
 
-variable "aws_access_key" {
-  description = "AWS access key"
-  type        = string
-  sensitive   = true
-}
 
-variable "aws_secret_access_key" {
-  description = "AWS secret access key"
-  type        = string
-  sensitive   = true
-}
-
-variable "domain_name" {
-  description = "The domain name for Route 53 (e.g. example.com)"
-  type        = string
-}
-
-variable "subdomain" {
-  description = "The subdomain to create (e.g. app)"
-  type        = string
-  default     = "app"
-}

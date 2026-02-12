@@ -1,0 +1,7 @@
+aws_access_key        = "YOUR_ACCESS_KEY"
+aws_secret_access_key = "YOUR_SECRET_KEY"
+domain_name           = "example.com"
+subdomain             = "app"
+key_name              = "demo" # Ensure this key pair exists in both ap-northeast-1 and ap-northeast-3
+project_name          = "omikuji"
+# vpc_cidr, etc. have defaults if you want to override them

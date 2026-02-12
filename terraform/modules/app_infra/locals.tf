@@ -1,5 +1,5 @@
 locals {
-  name_prefix = "minhnt146-demo"
+  name_prefix = "${var.project_name}-${var.environment}-${var.region_name}"
 
   common_tags = {
     Project     = var.project_name

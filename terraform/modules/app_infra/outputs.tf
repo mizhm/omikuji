@@ -8,6 +8,11 @@ output "public_alb_dns_name" {
   value       = aws_lb.public_alb.dns_name
 }
 
+output "public_alb_zone_id" {
+  description = "Zone ID of the public ALB"
+  value       = aws_lb.public_alb.zone_id
+}
+
 output "private_alb_dns_name" {
   description = "DNS name of the private ALB"
   value       = aws_lb.private_alb.dns_name
