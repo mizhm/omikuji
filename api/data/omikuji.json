@@ -7,21 +7,21 @@
       "text": "桜花 のどかににおう 春の野に 蝶もきて舞う 人の楽しさ",
       "meaning": "春の野原に桜の花がのどかに香り、蝶も舞い遊ぶように、心楽しく幸せな運気である。"
     },
-    "general_advice": "運気は盛大。心のままに振る舞っても天の加護がある。しかし、調子に乗りすぎて油断すれば、その福も消え失せる。謙虚さを忘れぬこと。",
+    "general_advice": "運気は盛大。心のままに振る舞っても天の加護がある。しかし、謙虚さを忘れれば福も消え失せる。",
     "categories": {
-      "wish": "思うがままに叶う。大願成就の日近し。",
+      "wish": "思うがままに叶う。",
       "waiting_person": "来る。たよりあり。",
-      "lost_item": "出る。高いところにある。",
+      "lost_item": "出る。高いところ。",
       "travel": "よし。連れの人あればなお良し。",
       "business": "利益あり。進んでなせ。",
-      "study": "安心して勉学せよ。成果あがる。",
-      "market_speculation": "買い時なり。利あり。",
-      "dispute": "勝つ。しかし相手を敬え。",
-      "romance": "相思相愛。良縁整う。",
-      "moving": "さわりなし。進め。",
-      "childbirth": "安産。母子ともに健やか。",
-      "illness": "治る。信心せよ。",
-      "marriage_proposal": "ととのう。急ぐが吉。"
+      "study": "安心して勉学せよ。",
+      "market_speculation": "買い時なり。",
+      "dispute": "勝つ。相手を敬え。",
+      "romance": "相思相愛。",
+      "moving": "さわりなし。",
+      "childbirth": "安産。健やか。",
+      "illness": "治る。",
+      "marriage_proposal": "ととのう。"
     },
     "lucky_data": {
       "color": "金色",
@@ -38,21 +38,21 @@
       "text": "照りつづく 日影見えねど 秋の月 雲の絶え間を 出でて輝く",
       "meaning": "長く続いた苦労の陰も消え、雲の切れ間から秋の名月が輝き出るように、運気が開けてくる。"
     },
-    "general_advice": "次第に運が開ける。焦りは禁物である。今は実力を蓄え、好機を待てば、必ずや大きな成果を得られるだろう。",
+    "general_advice": "次第に運が開ける。焦りは禁物。今は実力を蓄え、好機を待て。",
     "categories": {
-      "wish": "直ちには叶わぬが、後には叶う。",
+      "wish": "後には叶う。",
       "waiting_person": "遅れるが来る。",
-      "lost_item": "出にくい。人に問えばわかる。",
-      "travel": "遠出は控えよ。近場なら吉。",
-      "business": "小利あり。深追いは禁物。",
-      "study": "努力の積み重ねが実る。",
-      "market_speculation": "今は動くな。静観せよ。",
-      "dispute": "長引く恐れあり。和解せよ。",
-      "romance": "誠意を尽くせば通じる。",
-      "moving": "時を待て。急ぐと損をする。",
-      "childbirth": "順調。産後の養生を大切に。",
-      "illness": "長引くが命に別状なし。",
-      "marriage_proposal": "迷いあり。時を置け。"
+      "lost_item": "出にくい。",
+      "travel": "近場なら吉。",
+      "business": "小利あり。",
+      "study": "努力が実る。",
+      "market_speculation": "静観せよ。",
+      "dispute": "和解せよ。",
+      "romance": "誠意を尽くせ。",
+      "moving": "時を待て。",
+      "childbirth": "順調。",
+      "illness": "長引くが治る。",
+      "marriage_proposal": "時を置け。"
     },
     "lucky_data": {
       "color": "朱色",
@@ -64,26 +64,57 @@
   {
     "id": 3,
     "omikuji_number": "第三番",
+    "luck_level": "小吉",
+    "poem": {
+      "text": "春風に 池の氷も とけそめて のどけき花と 見ゆる色かな",
+      "meaning": "厳しい冬が去り、春風に池の氷も解け始め、のどかな花の季節が訪れる気配がある。"
+    },
+    "general_advice": "少しずつ良くなる。無理をせず、自然の流れに身を任せることが吉。",
+    "categories": {
+      "wish": "小さな願いは叶う。",
+      "waiting_person": "来るが遅い。",
+      "lost_item": "出る。",
+      "travel": "問題なし。",
+      "business": "相場を見るべし。",
+      "study": "基礎を固めよ。",
+      "market_speculation": "変動あり。",
+      "dispute": "長引く。",
+      "romance": "焦るな。",
+      "moving": "吉。",
+      "childbirth": "安産。",
+      "illness": "軽い。",
+      "marriage_proposal": "吉。"
+    },
+    "lucky_data": {
+      "color": "桃色",
+      "number": 2,
+      "direction": "西",
+      "item": "手鏡"
+    }
+  },
+  {
+    "id": 4,
+    "omikuji_number": "第四番",
     "luck_level": "吉",
     "poem": {
       "text": "波の音 嵐の音は 静まりて 日影のどけき 大海原かな",
-      "meaning": "荒れ狂っていた波や嵐の音も静まり、太陽がのどかに照らす大海原のような、穏やかな運気である。"
+      "meaning": "荒れ狂っていた波や嵐も静まり、太陽が照らす穏やかな大海原のような運気である。"
     },
-    "general_advice": "平穏無事な運勢。大きな変化を望むより、現状維持を心がけることで幸福が得られる。周囲との調和を大切にせよ。",
+    "general_advice": "平穏無事。変化を望むより現状維持が良い。周囲との調和を忘れるな。",
     "categories": {
-      "wish": "叶う。しかし大きな望みは控えよ。",
-      "waiting_person": "来る。驚くような土産あり。",
-      "lost_item": "家の中にある。探せ。",
-      "travel": "問題なし。楽しき旅となる。",
-      "business": "売り買い共に吉。",
-      "study": "基礎を固めれば吉。",
-      "market_speculation": "安定している。",
-      "dispute": "理はこちらにある。心配無用。",
-      "romance": "穏やかな愛が育つ。",
-      "moving": "よき処が見つかる。",
-      "childbirth": "安産。女の子の可能性大。",
-      "illness": "軽し。医師にかかればすぐ治る。",
-      "marriage_proposal": "良き相手現る。"
+      "wish": "叶う。",
+      "waiting_person": "来る。",
+      "lost_item": "家にある。",
+      "travel": "楽しき旅。",
+      "business": "吉。",
+      "study": "成果あり。",
+      "market_speculation": "安定。",
+      "dispute": "心配無用。",
+      "romance": "穏やか。",
+      "moving": "良き処あり。",
+      "childbirth": "安産。",
+      "illness": "すぐ治る。",
+      "marriage_proposal": "良き相手。"
     },
     "lucky_data": {
       "color": "青",
@@ -93,28 +124,28 @@
     }
   },
   {
-    "id": 4,
-    "omikuji_number": "第四番",
+    "id": 5,
+    "omikuji_number": "第五番",
     "luck_level": "末吉",
     "poem": {
       "text": "古き里 荒れたる家の 垣根にも 花咲き匂う 春は来にけり",
-      "meaning": "古びて荒れた家の垣根にも花が咲き、春が訪れた。長く辛い冬の時代が終わり、ようやく希望が見えてくる。"
+      "meaning": "荒れた家の垣根にも花が咲き、春が訪れた。長く辛い時が終わり、希望が見える。"
     },
-    "general_advice": "初めは苦労が多いが、後になって良くなる。何事も辛抱強く取り組むことが大切。諦めなければ、必ず春は来る。",
+    "general_advice": "初めは苦労が多いが、後になって良くなる。辛抱強くあれば必ず春は来る。",
     "categories": {
-      "wish": "今は叶わず。後日に期待せよ。",
-      "waiting_person": "来ない。便りもない。",
-      "lost_item": "出ず。あきらめよ。",
-      "travel": "行かぬがよい。災いあり。",
-      "business": "利益少なし。時期を待て。",
-      "study": "困難あり。一層の努力が必要。",
-      "market_speculation": "損をする。手を出くな。",
-      "dispute": "負ける。引くが勝ち。",
-      "romance": "障害あり。今は耐えよ。",
-      "moving": "動かぬが吉。",
-      "childbirth": "少し障りあり。用心せよ。",
-      "illness": "重し。養生せよ。",
-      "marriage_proposal": "調わず。見合わせよ。"
+      "wish": "後日に叶う。",
+      "waiting_person": "便りなし。",
+      "lost_item": "出ず。",
+      "travel": "行かぬが吉。",
+      "business": "時期を待て。",
+      "study": "努力せよ。",
+      "market_speculation": "手を出くな。",
+      "dispute": "引くが勝ち。",
+      "romance": "耐えよ。",
+      "moving": "動くな。",
+      "childbirth": "用心せよ。",
+      "illness": "養生せよ。",
+      "marriage_proposal": "見合わせよ。"
     },
     "lucky_data": {
       "color": "緑",
@@ -124,34 +155,468 @@
     }
   },
   {
-    "id": 5,
-    "omikuji_number": "第五番",
+    "id": 6,
+    "omikuji_number": "第六番",
     "luck_level": "凶",
     "poem": {
       "text": "黒雲の 空にかかりて 月見えず 闇に迷いて 道を失う",
-      "meaning": "黒い雲が空を覆い隠し、月も見えず、暗闇の中で道に迷ってしまうような、困難な状況である。"
+      "meaning": "黒い雲が空を覆い、月も見えず、暗闇の中で道に迷うような困難な状況。"
     },
-    "general_advice": "今は何をしてもうまくいかない時期。無理に進めば災いを招く。静かに身を慎み、嵐が過ぎ去るのを待つこと。自重せよ。",
+    "general_advice": "今は何をしてもうまくいかない。静かに身を慎み、嵐が過ぎ去るのを待て。",
     "categories": {
-      "wish": "叶わず。邪念を捨てよ。",
-      "waiting_person": "来ず。期待するな。",
-      "lost_item": "戻らず。盗難に注意。",
-      "travel": "凶。病難盗難の恐れあり。",
-      "business": "損害あり。現状維持に努めよ。",
-      "study": "身に入らず。雑念を払え。",
-      "market_speculation": "大暴落の兆し。",
-      "dispute": "必ず負ける。関わるな。",
-      "romance": "別れの兆しあり。",
-      "moving": "大凶。動けば災いあり。",
-      "childbirth": "難産のおそれ。神に祈れ。",
-      "illness": "長引く。名医を探せ。",
-      "marriage_proposal": "破談となる。"
+      "wish": "叶わず。",
+      "waiting_person": "来ず。",
+      "lost_item": "戻らず。",
+      "travel": "凶。",
+      "business": "損害あり。",
+      "study": "雑念を払え。",
+      "market_speculation": "暴落。",
+      "dispute": "負ける。",
+      "romance": "別れ。",
+      "moving": "大凶。",
+      "childbirth": "難産。",
+      "illness": "長引く。",
+      "marriage_proposal": "破談。"
     },
     "lucky_data": {
       "color": "白",
       "number": 1,
       "direction": "北",
       "item": "塩"
+    }
+  },
+  {
+    "id": 7,
+    "omikuji_number": "第七番",
+    "luck_level": "大吉",
+    "poem": {
+      "text": "久方の 光のどけき 春の日に 静心なく 花の散るらむ",
+      "meaning": "春の日の光はのどかだが、桜の花は落ち着きなく散っていく。はかなくも美しい運命。"
+    },
+    "general_advice": "絶好調の運気だが、栄枯盛衰は世の常。今を大切にし、感謝の心を忘れないこと。",
+    "categories": {
+      "wish": "速やかに叶う。",
+      "waiting_person": "すぐ来る。",
+      "lost_item": "必ず出る。",
+      "travel": "大いに吉。",
+      "business": "繁盛する。",
+      "study": "試験合格。",
+      "market_speculation": "大利あり。",
+      "dispute": "圧勝する。",
+      "romance": "幸福。",
+      "moving": "良い。",
+      "childbirth": "非常に安産。",
+      "illness": "完治する。",
+      "marriage_proposal": "良縁。"
+    },
+    "lucky_data": {
+      "color": "赤",
+      "number": 9,
+      "direction": "南東",
+      "item": "お守り"
+    }
+  },
+  {
+    "id": 8,
+    "omikuji_number": "第八番",
+    "luck_level": "吉",
+    "poem": {
+      "text": "吹く風に 高き梢は ゆれねども 此の下陰は のどけきかな",
+      "meaning": "高い枝は風に揺れていても、その木陰は風もあたらず穏やかである。"
+    },
+    "general_advice": "世間が騒がしくとも、自分の心は平穏を保て。動じない心が幸運を呼ぶ。",
+    "categories": {
+      "wish": "叶う。",
+      "waiting_person": "来る。",
+      "lost_item": "低い所。",
+      "travel": "吉。",
+      "business": "順調。",
+      "study": "集中せよ。",
+      "market_speculation": "堅調。",
+      "dispute": "解決する。",
+      "romance": "順調。",
+      "moving": "問題なし。",
+      "childbirth": "安産。",
+      "illness": "回復する。",
+      "marriage_proposal": "まとまる。"
+    },
+    "lucky_data": {
+      "color": "紫",
+      "number": 6,
+      "direction": "南西",
+      "item": "数珠"
+    }
+  },
+  {
+    "id": 9,
+    "omikuji_number": "第九番",
+    "luck_level": "末吉",
+    "poem": {
+      "text": "冬枯れの 木々の梢に 春待てば 花咲く頃は まだ遠きかな",
+      "meaning": "冬枯れの木々に春を待つが、花が咲く時期はまだ遠い。"
+    },
+    "general_advice": "時期尚早。今は耐える時。準備を怠らなければ、やがて来る春に大輪の花を咲かせる。",
+    "categories": {
+      "wish": "今は無理。",
+      "waiting_person": "来ない。",
+      "lost_item": "出ない。",
+      "travel": "延期せよ。",
+      "business": "利益なし。",
+      "study": "基礎から。",
+      "market_speculation": "待て。",
+      "dispute": "不利。",
+      "romance": "進展なし。",
+      "moving": "止まれ。",
+      "childbirth": "大事をとれ。",
+      "illness": "用心。",
+      "marriage_proposal": "まだ早い。"
+    },
+    "lucky_data": {
+      "color": "茶色",
+      "number": 4,
+      "direction": "北",
+      "item": "筆"
+    }
+  },
+  {
+    "id": 10,
+    "omikuji_number": "第十番",
+    "luck_level": "中吉",
+    "poem": {
+      "text": "月影の 澄み渡る夜に 船出して 宝の島へ 行くも嬉しき",
+      "meaning": "月の澄んだ夜に船を出して、宝島へ向かうような希望に満ちた運勢。"
+    },
+    "general_advice": "前途洋々。目標に向かって突き進むべし。協力者を得て成功する。",
+    "categories": {
+      "wish": "叶う。",
+      "waiting_person": "来る。",
+      "lost_item": "出る。",
+      "travel": "遠出吉。",
+      "business": "拡大せよ。",
+      "study": "進歩する。",
+      "market_speculation": "利益あり。",
+      "dispute": "勝つ。",
+      "romance": "進展する。",
+      "moving": "吉。",
+      "childbirth": "安産。",
+      "illness": "治る。",
+      "marriage_proposal": "吉。"
+    },
+    "lucky_data": {
+      "color": "銀色",
+      "number": 7,
+      "direction": "西",
+      "item": "硬貨"
+    }
+  },
+  {
+    "id": 11,
+    "omikuji_number": "第十一番",
+    "luck_level": "大吉",
+    "poem": {
+      "text": "大空に むら雲きえて 影もなく 輝くごとき 我がこころかな",
+      "meaning": "空の雲がきれいに消えて、一点の曇りもなく輝くような、晴れ晴れとした心境である。"
+    },
+    "general_advice": "迷いが晴れ、全てが順調に進む。自信を持って行動すれば、大きな成果を得られる。",
+    "categories": {
+      "wish": "必ず叶う。",
+      "waiting_person": "早く来る。",
+      "lost_item": "すぐ出る。",
+      "travel": "至る所吉。",
+      "business": "大いに利益あり。",
+      "study": "首席も夢でない。",
+      "market_speculation": "成功する。",
+      "dispute": "勝つ。",
+      "romance": "最高の縁。",
+      "moving": "直ちにせよ。",
+      "childbirth": "非常に軽い。",
+      "illness": "全快。",
+      "marriage_proposal": "即決せよ。"
+    },
+    "lucky_data": {
+      "color": "黄金色",
+      "number": 1,
+      "direction": "天",
+      "item": "太陽の絵"
+    }
+  },
+  {
+    "id": 12,
+    "omikuji_number": "第十二番",
+    "luck_level": "小吉",
+    "poem": {
+      "text": "雨風に さらされながら 松の木は いよいよ緑 色まさりけり",
+      "meaning": "雨風にさらされながらも、松の木はより一層緑の色を深めていく。"
+    },
+    "general_advice": "困難にあっても挫けず努力すれば、人間としての深みが増し、幸運をつかめる。",
+    "categories": {
+      "wish": "努力次第。",
+      "waiting_person": "遅れる。",
+      "lost_item": "見つかりにくい。",
+      "travel": "支障なし。",
+      "business": "地道に。",
+      "study": "忍耐が必要。",
+      "market_speculation": "慎重に。",
+      "dispute": "和解が良い。",
+      "romance": "じっくりと。",
+      "moving": "悪くない。",
+      "childbirth": "安産。",
+      "illness": "回復に向かう。",
+      "marriage_proposal": "時間をかけて。"
+    },
+    "lucky_data": {
+      "color": "濃緑",
+      "number": 5,
+      "direction": "東",
+      "item": "盆栽"
+    }
+  },
+  {
+    "id": 13,
+    "omikuji_number": "第十三番",
+    "luck_level": "凶",
+    "poem": {
+      "text": "嵐ひく 風の前の 怖ろしさ 心迷いて 足もすくみぬ",
+      "meaning": "嵐が来る前の風の音が恐ろしく、心が迷って足もすくんでしまう。"
+    },
+    "general_advice": "不安や恐怖に心が支配されている。今は動くべきではない。嵐が過ぎるのをじっと待つこと。",
+    "categories": {
+      "wish": "叶わず。",
+      "waiting_person": "来ない。",
+      "lost_item": "出ない。",
+      "travel": "危険。",
+      "business": "失敗する。",
+      "study": "集中できない。",
+      "market_speculation": "大損害。",
+      "dispute": "完敗。",
+      "romance": "不調。",
+      "moving": "止めるべき。",
+      "childbirth": "難がある。",
+      "illness": "悪化する。",
+      "marriage_proposal": "断れ。"
+    },
+    "lucky_data": {
+      "color": "黒",
+      "number": 9,
+      "direction": "北",
+      "item": "お守り"
+    }
+  },
+  {
+    "id": 14,
+    "omikuji_number": "第十四番",
+    "luck_level": "吉",
+    "poem": {
+      "text": "かき曇る 空もいつしか 晴れ渡り さやけき月の いずる嬉しさ",
+      "meaning": "曇っていた空もいつの間にか晴れ渡り、清らかな月が出てくる嬉しさよ。"
+    },
+    "general_advice": "悩み事が解決し、運が開ける。今までの苦労が報われる時が来た。",
+    "categories": {
+      "wish": "叶う。",
+      "waiting_person": "来る。",
+      "lost_item": "出る。",
+      "travel": "吉。",
+      "business": "利益出る。",
+      "study": "成果出る。",
+      "market_speculation": "買い。",
+      "dispute": "解決。",
+      "romance": "良縁。",
+      "moving": "良い。",
+      "childbirth": "安産。",
+      "illness": "治る。",
+      "marriage_proposal": "整う。"
+    },
+    "lucky_data": {
+      "color": "黄色",
+      "number": 3,
+      "direction": "南西",
+      "item": "月見団子"
+    }
+  },
+  {
+    "id": 15,
+    "omikuji_number": "第十五番",
+    "luck_level": "末吉",
+    "poem": {
+      "text": "心なき 他人の言に 惑わされ なすべき事も 忘れ果てつつ",
+      "meaning": "心ない他人の言葉に惑わされ、自分がやるべきことも忘れてしまっている。"
+    },
+    "general_advice": "他人の意見に流されず、自分の信念を持つこと。迷いを捨てて本分を尽くせば道は開ける。",
+    "categories": {
+      "wish": "叶いにくい。",
+      "waiting_person": "来ない。",
+      "lost_item": "出ない。",
+      "travel": "控えよ。",
+      "business": "不調。",
+      "study": "専念せよ。",
+      "market_speculation": "損する。",
+      "dispute": "不利。",
+      "romance": "誤解あり。",
+      "moving": "今は動くな。",
+      "childbirth": "用心。",
+      "illness": "長引く。",
+      "marriage_proposal": "見送り。"
+    },
+    "lucky_data": {
+      "color": "灰色",
+      "number": 4,
+      "direction": "西",
+      "item": "耳栓"
+    }
+  },
+  {
+    "id": 16,
+    "omikuji_number": "第十六番",
+    "luck_level": "中吉",
+    "poem": {
+      "text": "東風吹かば 匂いおこせよ 梅の花 あるじなしとて 春な忘れそ",
+      "meaning": "春風が吹いたら香りを届けておくれ、梅の花よ。主人がいなくても春を忘れてはいけない。"
+    },
+    "general_advice": "遠く離れていても心は通じる。誠実さを忘れなければ、必ず良い報せが届く。",
+    "categories": {
+      "wish": "叶う。",
+      "waiting_person": "来る。",
+      "lost_item": "出る。",
+      "travel": "吉。",
+      "business": "利益あり。",
+      "study": "はかどる。",
+      "market_speculation": "利あり。",
+      "dispute": "解決。",
+      "romance": "愛が深まる。",
+      "moving": "吉。",
+      "childbirth": "安産。",
+      "illness": "治る。",
+      "marriage_proposal": "吉。"
+    },
+    "lucky_data": {
+      "color": "紅",
+      "number": 2,
+      "direction": "東",
+      "item": "梅干し"
+    }
+  },
+  {
+    "id": 17,
+    "omikuji_number": "第十七番",
+    "luck_level": "大吉",
+    "poem": {
+      "text": "千早ぶる 神の守りの 厚ければ 何の憂いも あらじとぞ思",
+      "meaning": "神様の守りが厚いので、何の心配もないと思われる。"
+    },
+    "general_advice": "最強の運気。神仏の加護がある。何事も自信を持って行えば成功間違いなし。",
+    "categories": {
+      "wish": "願い事叶う。",
+      "waiting_person": "来る。",
+      "lost_item": "出る。",
+      "travel": "大吉。",
+      "business": "大成功。",
+      "study": "合格。",
+      "market_speculation": "大勝。",
+      "dispute": "勝つ。",
+      "romance": "結ばれる。",
+      "moving": "最良。",
+      "childbirth": "安産。",
+      "illness": "全快。",
+      "marriage_proposal": "最高。"
+    },
+    "lucky_data": {
+      "color": "白金",
+      "number": 8,
+      "direction": "全方位",
+      "item": "神棚"
+    }
+  },
+  {
+    "id": 18,
+    "omikuji_number": "第十八番",
+    "luck_level": "小吉",
+    "poem": {
+      "text": "世の中に 何か常なる 飛鳥川 昨日の淵ぞ 今日は瀬になる",
+      "meaning": "世の中に変わらないものはない。飛鳥川の昨日の淵が今日は瀬になるように。"
+    },
+    "general_advice": "変化の多い時期。状況に応じて柔軟に対応することが大切。こだわりを捨てよ。",
+    "categories": {
+      "wish": "状況による。",
+      "waiting_person": "遅れる。",
+      "lost_item": "出にくい。",
+      "travel": "注意が必要。",
+      "business": "変動あり。",
+      "study": "予習復習。",
+      "market_speculation": "見送れ。",
+      "dispute": "長引く。",
+      "romance": "波乱あり。",
+      "moving": "再考せよ。",
+      "childbirth": "安産。",
+      "illness": "変化あり。",
+      "marriage_proposal": "様子見。"
+    },
+    "lucky_data": {
+      "color": "水色",
+      "number": 6,
+      "direction": "北",
+      "item": "川の写真"
+    }
+  },
+  {
+    "id": 19,
+    "omikuji_number": "第十九番",
+    "luck_level": "末吉",
+    "poem": {
+      "text": "山高き 峰に嵐の 吹く時は 谷の小川も 波立ち騒ぐ",
+      "meaning": "高い山の峰に嵐が吹き荒れる時は、谷底の小川でさえも波立って騒ぐ。"
+    },
+    "general_advice": "上の立場の人の影響を受けやすい。巻き込まれないように注意し、身を守ること。",
+    "categories": {
+      "wish": "叶わず。",
+      "waiting_person": "来ない。",
+      "lost_item": "出ない。",
+      "travel": "控えよ。",
+      "business": "損失。",
+      "study": "集中難。",
+      "market_speculation": "危険。",
+      "dispute": "避ける。",
+      "romance": "トラブル。",
+      "moving": "不可。",
+      "childbirth": "大事に。",
+      "illness": "注意。",
+      "marriage_proposal": "断れ。"
+    },
+    "lucky_data": {
+      "color": "紺",
+      "number": 4,
+      "direction": "南",
+      "item": "石"
+    }
+  },
+  {
+    "id": 20,
+    "omikuji_number": "第二十番",
+    "luck_level": "大吉",
+    "poem": {
+      "text": "朝日さす 峰の紅葉も 映えてけり 今日は都の 紅葉狩りかな",
+      "meaning": "朝日が差す峰の紅葉も美しく映えている。今日は都へ紅葉狩りに行く日だ。"
+    },
+    "general_advice": "心弾む楽しい運気。趣味やレジャーを通じて幸運が訪れる。積極的に外に出よう。",
+    "categories": {
+      "wish": "叶う。",
+      "waiting_person": "楽しい人が来る。",
+      "lost_item": "出る。",
+      "travel": "最高。",
+      "business": "繁盛。",
+      "study": "進む。",
+      "market_speculation": "吉。",
+      "dispute": "解決。",
+      "romance": "楽しい恋。",
+      "moving": "吉。",
+      "childbirth": "安産。",
+      "illness": "治る。",
+      "marriage_proposal": "吉。"
+    },
+    "lucky_data": {
+      "color": "橙色",
+      "number": 7,
+      "direction": "西",
+      "item": "スニーカー"
     }
   }
 ]

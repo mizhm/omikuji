@@ -6,7 +6,6 @@ import (
 	"math/rand"
 	"net/http"
 	"os"
-	"time"
 
 	"api/models"
 
@@ -14,7 +13,8 @@ import (
 )
 
 type OmikujiHandler struct {
-	Fortunes []models.Omikuji
+	Fortunes   []models.Omikuji
+	ServerInfo models.ServerInfo
 }
 
 func NewOmikujiHandler(filePath string) (*OmikujiHandler, error) {
@@ -30,10 +30,12 @@ func NewOmikujiHandler(filePath string) (*OmikujiHandler, error) {
 		return nil, fmt.Errorf("lỗi parsing JSON: %w", err)
 	}
 
-	rand.Seed(time.Now().UnixNano())
+	// Cache server info once at startup
+	serverInfo := getServerInfo()
 
 	return &OmikujiHandler{
-		Fortunes: fortunes,
+		Fortunes:   fortunes,
+		ServerInfo: serverInfo,
 	}, nil
 }
 
@@ -47,14 +49,12 @@ func (h *OmikujiHandler) Draw(w http.ResponseWriter, r *http.Request) {
 	randomIndex := rand.Intn(len(h.Fortunes))
 	selectedFortune := h.Fortunes[randomIndex]
 
-	serverInfo := GetServerInfo()
-
 	response := struct {
 		models.Omikuji
 		ServerInfo models.ServerInfo `json:"server_info"`
 	}{
 		Omikuji:    selectedFortune,
-		ServerInfo: serverInfo,
+		ServerInfo: h.ServerInfo,
 	}
 
 	render.Status(r, http.StatusOK)
@@ -65,16 +65,16 @@ func (h *OmikujiHandler) GetAll(w http.ResponseWriter, r *http.Request) {
 	render.JSON(w, r, h.Fortunes)
 }
 
-func GetServerInfo() models.ServerInfo {
+func getServerInfo() models.ServerInfo {
 	hName, _ := os.Hostname()
 
 	instanceID := getAWSMetadata("instance-id")
 	
-	if instanceID == "not-aws-instance" {
+	if instanceID == "not-aws-instance" || instanceID == "unknown" {
 		return models.ServerInfo{
-			Hostname:  hName,
-			PrivateIP: "127.0.0.1 (Local Mode)",
-			InstanceID: "local-dev",
+			Hostname:         hName,
+			PrivateIP:        "127.0.0.1 (Local Mode)",
+			InstanceID:       "local-dev",
 			AvailabilityZone: "localhost",
 		}
 	}
