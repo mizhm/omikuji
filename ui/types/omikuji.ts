@@ -1,31 +1,36 @@
+export interface BilingualString {
+  ja: string;
+  vi: string;
+}
+
 export interface Omikuji {
   id: number;
   omikuji_number: string;
   luck_level: string;
   poem: {
-    text: string;
-    meaning: string;
+    text: BilingualString;
+    meaning: BilingualString;
   };
-  general_advice: string;
+  general_advice: BilingualString;
   categories: {
-    wish: string;
-    waiting_person: string;
-    lost_item: string;
-    travel: string;
-    business: string;
-    study: string;
-    market_speculation: string;
-    dispute: string;
-    romance: string;
-    moving: string;
-    childbirth: string;
-    illness: string;
-    marriage_proposal: string;
+    wish: BilingualString;
+    waiting_person: BilingualString;
+    lost_item: BilingualString;
+    travel: BilingualString;
+    business: BilingualString;
+    study: BilingualString;
+    market_speculation: BilingualString;
+    dispute: BilingualString;
+    romance: BilingualString;
+    moving: BilingualString;
+    childbirth: BilingualString;
+    illness: BilingualString;
+    marriage_proposal: BilingualString;
   };
   lucky_data: {
-    color: string;
+    color: BilingualString;
     number: number;
-    direction: string;
-    item: string;
+    direction: BilingualString;
+    item: BilingualString;
   };
 }

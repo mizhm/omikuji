@@ -8,7 +8,11 @@ import { Omikuji } from "../types/omikuji";
 export default function Home() {
   const [result, setResult] = useState<Omikuji | null>(null);
   const [isDrawing, setIsDrawing] = useState(false);
+  const [language, setLanguage] = useState<"ja" | "vi">("ja");
 
+  const toggleLanguage = () => {
+    setLanguage((prev) => (prev === "ja" ? "vi" : "ja"));
+  };
 
   const handleDraw = async () => {
     if (isDrawing) return;
@@ -26,7 +30,11 @@ export default function Home() {
       setResult(data);
     } catch (error) {
       console.error("おみくじエラー:", error);
-      alert("神様との接続が切れました！ (APIを確認)");
+      alert(
+        language === "ja"
+          ? "神様との接続が切れました！ (APIを確認)"
+          : "Mất kết nối với thần linh! (Kiểm tra API)",
+      );
     } finally {
       setIsDrawing(false);
     }
@@ -41,33 +49,56 @@ export default function Home() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(251,191,36,0.12),transparent_60%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(236,72,153,0.08),transparent_50%)]" />
 
+      {/* Language Toggle */}
+      <button
+        onClick={toggleLanguage}
+        className="absolute top-6 right-6 z-50 group flex items-center justify-center gap-2 px-5 py-2.5 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-white/90 font-serif hover:bg-white/10 hover:border-white/30 hover:text-white transition-all duration-300 shadow-lg hover:shadow-indigo-500/20"
+      >
+        <span className="text-sm tracking-widest uppercase font-medium">
+          {language === "ja" ? "Tiếng Việt" : "日本語"}
+        </span>
+        <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 group-hover:bg-indigo-300 shadow-[0_0_8px_rgba(129,140,248,0.8)] transition-colors" />
+      </button>
+
       {/* Main Content Container */}
       <div className="relative z-10 flex flex-col items-center gap-10 sm:gap-14 md:gap-16 max-w-5xl mx-auto w-full">
         {/* Header Section */}
         <div className="flex flex-col items-center gap-4 sm:gap-5">
           {/* Main Title */}
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] font-serif font-black text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.3)] tracking-tight leading-none">
-            おみくじ
+            {language === "ja" ? "おみくじ" : "Omikuji"}
           </h1>
-
           {/* Subtitle with decorative lines */}
-          <div className="flex items-center gap-4 sm:gap-5">
-            <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent to-white/40" />
-            <p className="text-lg sm:text-xl md:text-2xl font-serif font-light text-white/95 tracking-[0.35em] uppercase">
-              運命の書
+          <div className="flex items-center gap-2 sm:gap-5 w-full justify-center px-4">
+            <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-white/40 flex-shrink-0" />
+            <p
+              className={`font-serif font-light text-white/95 uppercase whitespace-nowrap text-center transition-all duration-300
+              ${
+                language === "ja"
+                  ? "text-lg sm:text-xl md:text-2xl tracking-[0.35em]"
+                  : "text-base sm:text-xl md:text-2xl tracking-[0.15em] sm:tracking-[0.25em]"
+              }`}
+            >
+              {language === "ja" ? "運命の書" : "Gieo Quẻ Vận Mệnh"}
             </p>
-            <div className="h-px w-12 sm:w-16 bg-gradient-to-l from-transparent to-white/40" />
+            <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-white/40 flex-shrink-0" />
           </div>
         </div>
 
         {/* Omikuji Box Component */}
-        <OmikujiBox onDraw={handleDraw} isDrawing={isDrawing} />
+        <OmikujiBox
+          onDraw={handleDraw}
+          isDrawing={isDrawing}
+          language={language}
+        />
 
         {/* Instruction Text - Always render to reserve space, just toggle opacity */}
         <p
           className={`text-white/70 text-xs sm:text-sm font-medium tracking-wide transition-opacity duration-300 ${isDrawing ? "opacity-0" : "opacity-100"}`}
         >
-          画像をタップして、今日の運勢を占おう
+          {language === "ja"
+            ? "画像をタップして、今日の運勢を占おう"
+            : "Chạm vào ống xăm để xem vận hạn hôm nay"}
         </p>
       </div>
 
@@ -76,6 +107,7 @@ export default function Home() {
         <ResultModal
           data={result}
           onClose={() => setResult(null)}
+          language={language}
         />
       )}
     </main>

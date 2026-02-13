@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
 import {
-  Inter as FontSans,
-  Noto_Serif_JP as FontSerif,
+  Cinzel as FontCinzel,
+  Playfair_Display as FontPlayfair,
 } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const fontSans = FontSans({
+const fontCinzel = FontCinzel({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-cinzel",
 });
 
-const fontSerif = FontSerif({
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  variable: "--font-serif",
+const fontPlayfair = FontPlayfair({
+  subsets: ["latin", "vietnamese"],
+  variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
@@ -32,8 +31,8 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
-          fontSerif.variable,
+          fontCinzel.variable,
+          fontPlayfair.variable,
         )}
       >
         {children}

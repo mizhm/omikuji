@@ -6,9 +6,10 @@ import Image from "next/image";
 interface Props {
   onDraw: () => void;
   isDrawing: boolean;
+  language: "ja" | "vi";
 }
 
-export default function OmikujiBox({ onDraw, isDrawing }: Props) {
+export default function OmikujiBox({ onDraw, isDrawing, language }: Props) {
   return (
     <div
       className="relative flex flex-col items-center justify-center cursor-pointer group select-none"
@@ -68,7 +69,13 @@ export default function OmikujiBox({ onDraw, isDrawing }: Props) {
         transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
       >
         <p className="text-white font-serif tracking-[0.25em] text-sm sm:text-base md:text-lg uppercase font-semibold">
-          {isDrawing ? "振っています..." : "タップして引く"}
+          {language === "ja"
+            ? isDrawing
+              ? "振っています..."
+              : "タップして引く"
+            : isDrawing
+              ? "Đang gieo quẻ..."
+              : "Chạm để gieo quẻ"}
         </p>
       </motion.div>
     </div>
