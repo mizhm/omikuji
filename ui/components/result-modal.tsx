@@ -1,8 +1,8 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Omikuji, ServerInfo } from "@/types/omikuji";
-import { X, Sparkles, Server, MapPin, ShieldCheck } from "lucide-react";
+import { Omikuji } from "@/types/omikuji";
+import { X, Sparkles } from "lucide-react";
 import {
   Card,
   CardDescription,
