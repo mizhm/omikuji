@@ -1,10 +1,3 @@
-export interface ServerInfo {
-  hostname: string;
-  private_ip: string;
-  instance_id: string;
-  availability_zone: string;
-}
-
 export interface Omikuji {
   id: number;
   omikuji_number: string;
@@ -35,5 +28,4 @@ export interface Omikuji {
     direction: string;
     item: string;
   };
-  server_info: ServerInfo;
 }

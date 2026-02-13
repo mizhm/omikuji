@@ -1,21 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import OmikujiBox from "../components/omikuji-box";
 import ResultModal from "../components/result-modal";
-import { Omikuji, ServerInfo } from "../types/omikuji";
+import { Omikuji } from "../types/omikuji";
 
 export default function Home() {
   const [result, setResult] = useState<Omikuji | null>(null);
   const [isDrawing, setIsDrawing] = useState(false);
-  const [frontendInfo, setFrontendInfo] = useState<ServerInfo | null>(null);
 
-  useEffect(() => {
-    fetch("/api/info")
-      .then((res) => res.json())
-      .then((data) => setFrontendInfo(data))
-      .catch((err) => console.error("Failed to fetch frontend info", err));
-  }, []);
 
   const handleDraw = async () => {
     if (isDrawing) return;
@@ -82,7 +75,6 @@ export default function Home() {
       {result && (
         <ResultModal
           data={result}
-          frontendInfo={frontendInfo}
           onClose={() => setResult(null)}
         />
       )}

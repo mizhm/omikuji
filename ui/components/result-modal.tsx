@@ -17,7 +17,6 @@ import { Button } from "@/components/ui/button";
 
 interface Props {
   data: Omikuji | null;
-  frontendInfo: ServerInfo | null;
   onClose: () => void;
 }
 
@@ -37,7 +36,7 @@ const CATEGORY_MAP: Record<string, string> = {
   marriage_proposal: "縁談",
 };
 
-export default function ResultModal({ data, frontendInfo, onClose }: Props) {
+export default function ResultModal({ data, onClose }: Props) {
   if (!data) return null;
 
   return (
@@ -167,75 +166,6 @@ export default function ResultModal({ data, frontendInfo, onClose }: Props) {
                 </Badge>
               </div>
             </CardFooter>
-
-            {/* Server Info Section */}
-            <div className="bg-muted/30 backdrop-blur-sm">
-              <Separator className="bg-border/30" />
-
-              <div className="flex flex-col gap-3 py-3 sm:py-4 px-4 sm:px-6">
-                {/* Backend Info */}
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-[9px] sm:text-[10px] font-bold text-primary/60 uppercase tracking-widest">
-                    バックエンド
-                  </span>
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-center">
-                    <Badge
-                      variant="outline"
-                      className="border-primary/20 text-primary bg-primary/5 text-[10px] sm:text-xs px-2 py-1"
-                    >
-                      <Server className="w-3 h-3 mr-1" />
-                      {data.server_info.hostname}
-                    </Badge>
-                    <Badge
-                      variant="outline"
-                      className="border-primary/20 text-primary bg-primary/5 text-[10px] sm:text-xs px-2 py-1"
-                    >
-                      <MapPin className="w-3 h-3 mr-1" />
-                      {data.server_info.availability_zone}
-                    </Badge>
-                    <Badge
-                      variant="outline"
-                      className="border-primary/20 text-primary bg-primary/5 text-[10px] sm:text-xs px-2 py-1"
-                    >
-                      <ShieldCheck className="w-3 h-3 mr-1" />
-                      {data.server_info.private_ip}
-                    </Badge>
-                  </div>
-                </div>
-
-                {/* Frontend Info */}
-                {frontendInfo && (
-                  <div className="flex flex-col items-center gap-2">
-                    <span className="text-[9px] sm:text-[10px] font-bold text-accent/60 uppercase tracking-widest">
-                      フロントエンド
-                    </span>
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-center">
-                      <Badge
-                        variant="outline"
-                        className="border-accent/20 text-accent bg-accent/5 text-[10px] sm:text-xs px-2 py-1"
-                      >
-                        <Server className="w-3 h-3 mr-1" />
-                        {frontendInfo.hostname}
-                      </Badge>
-                      <Badge
-                        variant="outline"
-                        className="border-accent/20 text-accent bg-accent/5 text-[10px] sm:text-xs px-2 py-1"
-                      >
-                        <MapPin className="w-3 h-3 mr-1" />
-                        {frontendInfo.availability_zone}
-                      </Badge>
-                      <Badge
-                        variant="outline"
-                        className="border-accent/20 text-accent bg-accent/5 text-[10px] sm:text-xs px-2 py-1"
-                      >
-                        <ShieldCheck className="w-3 h-3 mr-1" />
-                        {frontendInfo.private_ip}
-                      </Badge>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
           </Card>
         </motion.div>
       </motion.div>
